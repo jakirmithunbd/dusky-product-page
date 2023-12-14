@@ -36,10 +36,6 @@ img {
   max-width: 100%;
 }
 
-section {
-  padding: 80px 0;
-}
-
 .container {
   width: 100%;
   margin: 0 auto;
@@ -62,7 +58,7 @@ section {
 
 .btn {
   display: inline-block;
-  padding: 14px 24px;
+  padding: 11px 30px;
   border-radius: 4px;
   font-size: 17px;
   line-height: 28px;
@@ -70,6 +66,7 @@ section {
   z-index: 1;
   font-weight: 400;
   color: #ffffff;
+  text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(-12.76%, #89A3FF), color-stop(38.44%, #6083FF), color-stop(139.29%, #476DF4));
   background: linear-gradient(180deg, #89A3FF -12.76%, #6083FF 38.44%, #476DF4 139.29%);
 }
@@ -180,11 +177,13 @@ section {
 
 .section-title {
   width: 100%;
-  max-width: 765px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  padding: 30px 0;
 }
 .section-title h2 {
+  padding: 0 20px;
   color: #FFF;
 }
 .section-title h2 span {
@@ -642,6 +641,7 @@ p {
 
 .dusky-hero {
   overflow: hidden;
+  padding: 80px 0;
 }
 .dusky-hero .cloud-animation {
   -webkit-animation: moveclouds 15s linear infinite;
@@ -733,6 +733,9 @@ p {
           animation: fadeIn 5s linear infinite;
 }
 .dusky-hero .container .dusky-hero-content {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 50%;
 }
 .dusky-hero .container .dusky-hero-content h4 {
@@ -856,35 +859,35 @@ p {
 }
 
 .features-area {
-  bottom: 0;
-  left: 0;
+  margin: 70px 0;
 }
-.features-area .features-wrapper .feature-item {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.features-area .features-wrapper .feature-item .feature-icon {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam .feature-icon {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 22%;
           flex: 0 0 22%;
   position: relative;
 }
-.features-area .features-wrapper .feature-item .feature-icon .feature-icon-circle {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam .feature-icon .feature-icon-circle {
   bottom: -44px;
   left: -57px;
 }
-.features-area .features-wrapper .feature-item .feature-meta {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam .feature-meta {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 63%;
           flex: 0 0 63%;
 }
-.features-area .features-wrapper .feature-item .fearture-line-wrap {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam .fearture-line-wrap {
   width: 100%;
 }
-.features-area .features-wrapper .feature-item .fearture-line-wrap .feature-line {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam .fearture-line-wrap .feature-line {
   width: 100%;
+  padding: 0 95px;
 }
-.features-area .features-wrapper .feature-item .fearture-line-wrap .mini-moon {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam .fearture-line-wrap .mini-moon {
   width: 50px;
   height: 50px;
   position: absolute;
@@ -896,7 +899,7 @@ p {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
-.features-area .features-wrapper .feature-item .fearture-line-wrap .mini-star {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam .fearture-line-wrap .mini-star {
   width: 23px;
   height: 23px;
   position: absolute;
@@ -908,24 +911,24 @@ p {
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
-.features-area .features-wrapper .feature-item.revarse {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam.revarse {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
-.features-area .features-wrapper .feature-item.revarse .feature-line {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam.revarse .feature-line {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
-.features-area .features-wrapper .feature-item.revarse .mini-moon {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam.revarse .mini-moon {
   -webkit-animation: moveclouds-mini-moon-revarse 5s linear infinite;
           animation: moveclouds-mini-moon-revarse 5s linear infinite;
   position: absolute;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
-.features-area .features-wrapper .feature-item.revarse .mini-star {
+.features-area .features-wrapper .feature-item-wrapper .feature-itam.revarse .mini-star {
   -webkit-animation: moveclouds-mini-star-revarse 5s linear infinite;
           animation: moveclouds-mini-star-revarse 5s linear infinite;
   position: absolute;
@@ -936,10 +939,9 @@ p {
 .single-festure-area .container .single-festure-area-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 30px 1fr 30px 1fr;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  margin-top: 100px;
+  margin: 50px 0;
 }
 .single-festure-area .container .single-festure-area-wrapper .single-festure {
   overflow: hidden;
@@ -963,10 +965,10 @@ p {
 .dusky-plugin-section .plugin-itam-wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (minmax(100px, 1fr))[4];
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
   padding: 80px 0;
-  margin-top: 70px;
+  margin: 40px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -975,7 +977,6 @@ p {
   background: linear-gradient(180deg, rgba(217, 217, 217, 0.02) 0%, rgba(217, 217, 217, 0.01) 100%);
 }
 .dusky-plugin-section .plugin-itam-wrapper .plugin-item {
-  padding: 0 75px;
   border-right: 1px solid rgba(255, 255, 255, 0.13);
 }
 .dusky-plugin-section .plugin-itam-wrapper .plugin-item h5 {
@@ -989,11 +990,9 @@ p {
 }
 
 .dusky-review-section .dusky-review-itam-wrepper {
-  margin-top: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .dusky-review-section .dusky-review-itam-wrepper .dusky-review-item {
   border-radius: 12px;
@@ -1047,8 +1046,50 @@ p {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 217, 217, 0.03)), to(rgba(217, 217, 217, 0)));
   background: linear-gradient(180deg, rgba(217, 217, 217, 0.03) 0%, rgba(217, 217, 217, 0) 100%);
 }
+.dusky-review-section .dusky-review-itam-wrepper .dusky-review-item.revarse:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 217, 217, 0)), to(rgba(217, 217, 217, 0.03)));
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0.03) 100%);
+}
+.dusky-review-section .dusky-review-itam-wrepper .dusky-review-item:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 217, 217, 0.03)), to(rgba(217, 217, 217, 0)));
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.03) 0%, rgba(217, 217, 217, 0) 100%);
+}
 
+.call-to-action-section .container .call-to-action {
+  margin: 50px 0;
+  border-radius: 20px;
+  background: rgba(217, 217, 217, 0.03);
+  padding: 75px 0;
+}
+.call-to-action-section .container .call-to-action .call-to-action-wrapper {
+  gap: 30px;
+  margin-top: 40px;
+}
+.call-to-action-section .container .call-to-action .call-to-action-wrapper .btn {
+  width: 178px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .features-area {
+    overflow: hidden;
+  }
+}
 @media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 54px;
+    line-height: 60px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  h3 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .dusky-hero .dusky-hero-content h4 {
+    padding: 10px 0 !important;
+  }
   .dusky-header .header-menu-wrap .mobile-menu-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1108,14 +1149,34 @@ p {
     left: 0;
   }
 }
-@media only screen and (min-width: 992px) {
-  .mobile-togger {
-    display: none;
+@media only screen and (max-width: 880px) {
+  .features-area .features-wrapper .section-title {
+    padding-bottom: 40px !important;
+  }
+  .section-title {
+    padding: 0 !important;
   }
 }
-@media only screen and (min-width: 769px) {
-  .bars {
-    display: none;
+@media only screen and (max-width: 820px) {
+  h1 {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  h3 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .features-area {
+    margin: 30px 0 !important;
+  }
+  .features-area .feature-item-wrapper .feature-itam .feature-icon {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 25% !important;
+            flex: 0 0 25% !important;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -1147,5 +1208,191 @@ p {
     position: fixed;
     left: -100%;
     top: 0;
+  }
+  .dusky-hero .cloud-animation-small-2 {
+    display: none;
+  }
+  .dusky-hero .dusky-hero-image .heros-image {
+    width: 100%;
+    max-width: 270px;
+    padding-top: 80px !important;
+  }
+  .dusky-hero .dusky-hero-image .moving-circle {
+    top: -7% !important;
+    right: -23% !important;
+  }
+  .dusky-hero .dusky-hero-image .small-circle-1, .dusky-hero .dusky-hero-image .small-circle-3 {
+    display: none;
+  }
+  .dusky-plugin-section .plugin-itam-wrapper {
+    -ms-grid-columns: (minmax(100px, 1fr))[2];
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    row-gap: 30px;
+    padding: 40px 0;
+  }
+  .dusky-plugin-section .plugin-itam-wrapper .plugin-item:nth-child(-2n+4) {
+    border: 0 !important;
+  }
+  .btn {
+    padding: 5px 10px !important;
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  @-webkit-keyframes moveclouds-640px {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: calc(100% - 290px);
+    }
+  }
+  @keyframes moveclouds-640px {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: calc(100% - 290px);
+    }
+  }
+  .dusky-hero {
+    padding: 20px 0;
+  }
+  .dusky-hero .moon {
+    top: 41%;
+  }
+  .dusky-hero .cloud-animation {
+    -webkit-animation: moveclouds-640px 10s linear infinite;
+            animation: moveclouds-640px 10s linear infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  .dusky-hero .cloud-animation-1 {
+    -webkit-animation: moveclouds-640px 10s linear infinite;
+            animation: moveclouds-640px 10s linear infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  .dusky-hero .cloud-animation-2 {
+    display: none;
+  }
+  .dusky-hero .cloud-animation-small {
+    display: none;
+  }
+  .dusky-hero .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+  .dusky-hero .container .dusky-hero-content {
+    width: 100%;
+  }
+  .dusky-hero .container .dusky-hero-content .hero-button-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .dusky-hero .container .dusky-hero-image {
+    width: 100%;
+    text-align: center;
+  }
+  .dusky-hero .container .dusky-hero-image .moving-circle {
+    top: 0;
+    left: 6%;
+  }
+  .dusky-hero .container .dusky-hero-image .dusky-togol {
+    width: 50px;
+    top: 48%;
+    right: 13%;
+  }
+  .dusky-hero .container .dusky-hero-image .wordpress-logo {
+    width: 52px;
+    bottom: 31%;
+    left: 13%;
+  }
+  .dusky-hero .container .dusky-hero-image .day-night-togol {
+    width: 70px;
+    top: -6%;
+    right: 75%;
+  }
+  .dusky-hero .container .dusky-hero-image .light-togol {
+    top: 3%;
+    right: 30%;
+  }
+  .dusky-hero .container .dusky-hero-image .small-circle-4 {
+    bottom: 6%;
+    left: 5%;
+  }
+  .features-area .features-wrapper .feature-item-wrapper .feature-itam.d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .features-area .features-wrapper .feature-item-wrapper .feature-itam .feature-icon {
+    width: 30%;
+    margin-bottom: 15px;
+  }
+  .features-area .features-wrapper .feature-item-wrapper .feature-itam .feature-icon .feature-icon-circle {
+    bottom: -82px;
+    left: -89px;
+  }
+  .features-area .features-wrapper .feature-item-wrapper .feature-itam .fearture-line-wrap .feature-line {
+    padding: 0;
+  }
+  .dusky-review-section .dusky-review-itam-wrepper {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .dusky-review-section .dusky-review-itam-wrepper .dusky-review-item {
+    margin-top: 30px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 217, 217, 0.5)), to(rgba(217, 217, 217, 0.03))) !important;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.5) 0%, rgba(217, 217, 217, 0.03) 100%) !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  h1 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .btn {
+    font-size: 15px;
+  }
+  .dusky-hero .container .dusky-hero-content .hero-button-wrapper {
+    gap: 20px;
+  }
+  .features-area .feature-item-wrapper .feature-icon .feature-icon-circle {
+    bottom: -90px;
+    left: -97px;
+  }
+  .dusky-plugin-section .plugin-itam-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .dusky-plugin-section .plugin-itam-wrapper .plugin-item {
+    border: 0;
   }
 }
