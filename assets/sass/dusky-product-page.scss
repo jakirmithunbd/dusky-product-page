@@ -720,12 +720,15 @@ p {
         .feature-item-wrapper {
             .feature-itam {
                 flex-wrap: wrap;
+                border-radius: 143px;
+                background: linear-gradient(180deg, rgba(25, 18, 90, 0.06) 0%, rgba(255, 255, 255, 0.00) 100%);
+
                 .feature-icon {
                     flex: 0 0 22%;
                     position: relative;
 
                     .feature-icon-circle {
-                        bottom: -44px;
+                        bottom: -60px;
                         left: -57px;  
                     }
                 }
@@ -787,6 +790,7 @@ p {
     }
 }
 // Feature Area End//
+
 // Single Feature Section Start //
 .single-festure-area {
     .container {
@@ -797,18 +801,20 @@ p {
             gap: 30px;
             margin: 50px 0;
             .single-festure {
+                
                 h4 { font-weight: 700;
                     color: $text;
                 }
-                overflow: hidden;
+
                 svg {
                     margin-bottom: 15px;
                 }
+                overflow: hidden;
                 border-radius: 16px;
                 padding: 50px 40px;
                 background: linear-gradient(180deg, rgba(217, 217, 217, 0.02) 0%, rgba(217, 217, 217, 0.01) 100%);
                 .single-feature-circle {
-                    top: 158px;
+                    top: 128px;
                     left: -173px;
                 }
             }
@@ -944,6 +950,33 @@ p {
     }
 }
 
+@media only screen and ( max-width: 1024px ) {
+    .features-area {
+        .features-wrapper {
+            .feature-item-wrapper {
+                .feature-itam {
+                    .feature-icon {
+                        .feature-icon-circle {
+                            bottom: -62px;
+                            left: -72px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .single-festure-area {
+        .single-festure-area-wrapper {
+            .single-festure {
+                .single-feature-circle {
+                    top: 148px !important;
+                    left: -173px;
+                }
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 992px) {
     h1 {
         font-size: 54px;
@@ -1045,10 +1078,28 @@ p {
             .section-title {
                 padding-bottom: 40px !important;
             }
+            .feature-itam {
+                .feature-icon {
+                    .feature-icon-circle {
+                        bottom: -77px !important;
+                        left: -85px !important;
+                    }
+                }
+            }
         }
     }
     .section-title {
         padding: 0 !important;
+    }
+    .single-festure-area {
+        .single-festure-area-wrapper {
+            .single-festure {
+                .single-feature-circle {
+                    top: 218px !important;
+                    left: -173px;
+                }
+            }
+        }
     }
 }
 
@@ -1071,8 +1122,34 @@ p {
         .feature-item-wrapper {
             .feature-itam {
                 .feature-icon {
-                    flex: 0 0 25% !important; 
+                    flex: 0 0 28% !important; 
+                    
+                    .feature-icon-circle {
+                        bottom: -59px !important;
+                        left: -70px !important;
+                    }
                 }
+            }
+        }
+    }
+
+    .single-festure-area {
+        .single-festure-area-wrapper {
+            .single-festure {
+                .single-feature-circle {
+                    top: 128px !important;
+                    left: -173px;
+                }
+            }
+        }
+    }
+
+    .call-to-action-section {
+        .call-to-action {
+            padding: 40px 18px !important;
+            .call-to-action-wrapper {
+                gap: 20px !important;
+                margin-top: 30px !important;
             }
         }
     }
@@ -1080,7 +1157,7 @@ p {
 
 @media only screen and ( max-width: 768px ) {
 
-    .codeconfig-header {
+    .dusky-header {
 
         .header-menu-wrap {
 
@@ -1135,6 +1212,32 @@ p {
         }
     }
 
+    .features-area {
+        .features-wrapper {
+            .feature-item-wrapper {
+                .feature-itam {
+                    .feature-icon {
+                        .feature-icon-circle {
+                            bottom: -68px !important;
+                            left: -76px !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .single-festure-area {
+        .single-festure-area-wrapper {
+            .single-festure {
+                .single-feature-circle {
+                    top: 148px !important;
+                    left: -173px;
+                }
+            }
+        }
+    }
+
     .dusky-plugin-section {
         .plugin-itam-wrapper {
             grid-template-columns: repeat(2, minmax(100px,1fr));
@@ -1163,7 +1266,7 @@ p {
     .dusky-hero {
         padding: 20px 0;
         .moon {
-            top: 41%;
+            top: 44%;
         }
         .cloud-animation {
             animation: moveclouds-640px 10s linear infinite;
@@ -1237,11 +1340,11 @@ p {
                     }
 
                     .feature-icon {
-                        width: 30%;
+                        width: 175px;
                         margin-bottom: 15px;
                         .feature-icon-circle {
-                            bottom: -82px;
-                            left: -89px;
+                            bottom: -81px !important;
+                            left: -89px !important;
                         }
                     }
 
@@ -1254,13 +1357,22 @@ p {
             }
         }
     }
+
+    .single-festure-area {
+        .single-festure-area-wrapper {
+            .single-festure {
+                .single-feature-circle {
+                    top: 109px !important;
+                    left: -173px;
+                }
+            }
+        }
+    }
+
     .dusky-review-section {
         .dusky-review-itam-wrepper {
             grid-template-columns: repeat( auto-fit , minmax(250px , 1fr) );
-            .dusky-review-item {
-                margin-top: 30px;
-                background: linear-gradient(180deg, rgba(217, 217, 217, .5) 0%, rgba(217, 217, 217, 0.03) 100%) !important;
-            }
+            gap: 10px;
         }
     }
 }
@@ -1280,6 +1392,16 @@ p {
 
     .btn {
         font-size: 15px;
+    }
+
+    .dusky-header {
+        .mobile-menu-wrapper {
+            .logo-wrapper {
+                a {
+                    font-size: 18px;
+                }
+            }
+        }
     }
 
     .dusky-hero {
@@ -1308,7 +1430,7 @@ p {
 
     .dusky-plugin-section {
         .plugin-itam-wrapper {
-            grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+            grid-template-columns: repeat(1, minmax(100px,1fr));
 
             .plugin-item {
                 border: 0;
