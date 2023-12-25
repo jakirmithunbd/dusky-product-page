@@ -1273,15 +1273,6 @@ p {
   }
 }
 @media only screen and (max-width: 768px) {
-  .dusky-header .header-menu-wrap .logo-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 100%;
-  }
   .dusky-header .header-menu-wrap .logo-wrapper .bars {
     display: block;
     height: 30px;
@@ -1459,8 +1450,7 @@ p {
     padding: 0;
   }
   .single-festure-area .single-festure-area-wrapper .single-festure .single-feature-circle {
-    top: 109px !important;
-    left: -173px;
+    top: 194px !important;
   }
   .dusky-review-section .dusky-review-itam-wrepper {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1483,8 +1473,12 @@ p {
   .btn {
     font-size: 15px;
   }
+  .dusky-header .mobile-menu-wrapper .logo-wrapper .divider {
+    margin: 7px;
+  }
   .dusky-header .mobile-menu-wrapper .logo-wrapper a {
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 20px;
   }
   .dusky-hero .container .dusky-hero-content .hero-button-wrapper {
     gap: 20px;
@@ -1492,6 +1486,9 @@ p {
   .features-area .feature-item-wrapper .feature-icon .feature-icon-circle {
     bottom: -90px;
     left: -97px;
+  }
+  .single-festure-area .single-festure-area-wrapper .single-festure .single-feature-circle {
+    top: 106px !important;
   }
   .dusky-plugin-section .plugin-itam-wrapper {
     -ms-grid-columns: (minmax(100px, 1fr))[1];
