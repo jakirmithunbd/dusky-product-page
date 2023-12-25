@@ -567,6 +567,26 @@ p {
             transform: translate(30px, 30px);
   }
 }
+@-webkit-keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
+@keyframes move-forever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+            transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+            transform: translate3d(85px, 0, 0);
+  }
+}
 .dusky-header {
   padding: 22px 0;
   position: fixed;
@@ -856,6 +876,43 @@ p {
   top: calc(50% - 250px);
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
+}
+
+.dusky-hero-wave .dusky-waves {
+  position: absolute;
+  width: 100%;
+  min-height: 50px;
+  max-height: 100px;
+  bottom: 0;
+  left: 0;
+}
+.dusky-hero-wave .dusky-waves .parallax > use {
+  -webkit-animation: move-forever 20s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: move-forever 20s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.dusky-hero-wave .dusky-waves .parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+          animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s;
+}
+.dusky-hero-wave .dusky-waves .parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+          animation-delay: -3s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+}
+.dusky-hero-wave .dusky-waves .parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+          animation-duration: 13s;
+}
+.dusky-hero-wave .dusky-waves .parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+          animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
 }
 
 .features-area {
