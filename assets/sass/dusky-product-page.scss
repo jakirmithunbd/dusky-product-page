@@ -736,7 +736,7 @@ p {
         left: 0;
     
         .parallax>use {
-            animation: move-forever 20s cubic-bezier(.55, .5, .45, .5) infinite;
+            animation: move-forever 10s cubic-bezier(.55, .5, .45, .5) infinite;
         }
             
         .parallax>use:nth-child(1) {
@@ -1480,7 +1480,7 @@ p {
         .single-festure-area-wrapper {
             .single-festure {
                 .single-feature-circle {
-                    top: 106px !important;
+                    top: calc(height-top) !important;
                 }
             }
         }

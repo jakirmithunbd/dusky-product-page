@@ -887,8 +887,8 @@ p {
   left: 0;
 }
 .dusky-hero-wave .dusky-waves .parallax > use {
-  -webkit-animation: move-forever 20s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-          animation: move-forever 20s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  -webkit-animation: move-forever 10s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+          animation: move-forever 10s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 .dusky-hero-wave .dusky-waves .parallax > use:nth-child(1) {
   -webkit-animation-delay: -2s;
@@ -1488,7 +1488,7 @@ p {
     left: -97px;
   }
   .single-festure-area .single-festure-area-wrapper .single-festure .single-feature-circle {
-    top: 106px !important;
+    top: calc(height-top) !important;
   }
   .dusky-plugin-section .plugin-itam-wrapper {
     -ms-grid-columns: (minmax(100px, 1fr))[1];
